@@ -1,0 +1,105 @@
+[{
+"id":1,
+"text":"Folder1",
+"iconCls":"icon-more",
+"state":'closed',
+"children":[{
+		"text":"菜单F1",
+		"attributes":{
+			"url":"/demo/book/abc",
+		}
+	},{
+		"text":"菜单F2",
+		"attributes":{
+			"url":"/demo/book/abc",
+		}
+	},{
+		"text":"菜单F3",
+		"attributes":{
+			"url":"/demo/book/abc",
+		}
+	},{
+		"text":"菜单F4",
+		"attributes":{
+			"url":"/demo/book/abc",
+		}
+	}]
+},{
+"id":2,
+"text":"Folder2",
+"iconCls":"icon-more",
+"state":'closed',
+"children":[{
+		"text":"菜单G1",
+		"attributes":{
+			"url":"/demo/book/abc",
+		}
+	},{
+		"text":"菜单G2",
+		"attributes":{
+			"url":"/demo/book/abc",
+		}
+	},{
+		"text":"菜单G3",
+		"attributes":{
+			"url":"/demo/book/abc",
+		}
+	},{
+		"text":"菜单G4",
+		"attributes":{
+			"url":"/demo/book/abc",
+		}
+	}]
+},{
+"id":3,
+"text":"Folder3",
+"iconCls":"icon-more",
+"state":'closed',
+"children":[{
+		"text":"菜单H1",
+		"attributes":{
+			"url":"/demo/book/abc",
+		}
+	},{
+		"text":"菜单H2",
+		"attributes":{
+			"url":"/demo/book/abc",
+		}
+	},{
+		"text":"菜单H3",
+		"attributes":{
+			"url":"/demo/book/abc",
+		}
+	},{
+		"text":"菜单H4",
+		"attributes":{
+			"url":"/demo/book/abc",
+		}
+	}]
+},{
+"id":4,
+"text":"Folder4",
+"iconCls":"icon-more",
+"state":'closed',
+"children":[{
+		"text":"菜单J1",
+		"attributes":{
+			"url":"/demo/book/abc",
+		}
+	},{
+		"text":"菜单J2",
+		"attributes":{
+			"url":"/demo/book/abc",
+		}
+	},{
+		"text":"菜单J3",
+		"attributes":{
+			"url":"/demo/book/abc",
+		}
+	},{
+		"text":"菜单J4",
+		"attributes":{
+			"url":"/demo/book/abc",
+		}
+	}]
+}];

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hunger.mapper.SysRoleMenuMapper" >
+
+    <resultMap id="BaseResultMap" type="com.hunger.model.SysRoleMenu" >
+        <id column="rmid" property="rmid" jdbcType="BIGINT" />
+        <result column="rid" property="rid" jdbcType="BIGINT" />
+        <result column="mid" property="mid" jdbcType="BIGINT" />
+    </resultMap>
+
+    <sql id="Base_Column_List" >
+        rmid, rid, mid
+    </sql>
+
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+        select 
+        <include refid="Base_Column_List" />
+        from sys_role_menu
+        where rmid = #{rmid,jdbcType=BIGINT}
+    </select>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+        delete from sys_role_menu
+        where rmid = #{rmid,jdbcType=BIGINT}
+    </delete>
+
+    <insert id="insert" parameterType="com.hunger.model.SysRoleMenu" >
+        insert into sys_role_menu (rmid, rid, mid)
+        values (#{rmid,jdbcType=BIGINT}, #{rid,jdbcType=BIGINT}, #{mid,jdbcType=BIGINT})
+    </insert>
+
+    <insert id="insertSelective" parameterType="com.hunger.model.SysRoleMenu" >
+        insert into sys_role_menu
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test="rmid != null" >
+                rmid,
+            </if>
+            <if test="rid != null" >
+                rid,
+            </if>
+            <if test="mid != null" >
+                mid,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test="rmid != null" >
+                #{rmid,jdbcType=BIGINT},
+            </if>
+            <if test="rid != null" >
+                #{rid,jdbcType=BIGINT},
+            </if>
+            <if test="mid != null" >
+                #{mid,jdbcType=BIGINT},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="updateByPrimaryKeySelective" parameterType="com.hunger.model.SysRoleMenu" >
+        update sys_role_menu
+        <set >
+            <if test="rid != null" >
+                rid = #{rid,jdbcType=BIGINT},
+            </if>
+            <if test="mid != null" >
+                mid = #{mid,jdbcType=BIGINT},
+            </if>
+        </set>
+        where rmid = #{rmid,jdbcType=BIGINT}
+    </update>
+
+    <update id="updateByPrimaryKey" parameterType="com.hunger.model.SysRoleMenu" >
+        update sys_role_menu
+        set rid = #{rid,jdbcType=BIGINT},
+            mid = #{mid,jdbcType=BIGINT}
+        where rmid = #{rmid,jdbcType=BIGINT}
+    </update>
+</mapper>

@@ -1,0 +1,175 @@
+[
+	{
+		"id": 1,
+		"text": "用户管理",
+		"state": "closed",
+		"checked": false,
+		"attributes": null,
+		"url": "/user/manage",
+		"iconCls": null,
+		"pid": 0,
+		"children": [
+			{
+				"id": 2,
+				"text": "用户添加",
+				"state": "closed",
+				"checked": false,
+				"attributes": null,
+				"url": "/user/add",
+				"iconCls": null,
+				"pid": 1,
+				"openMode": null
+			},
+			{
+				"id": 3,
+				"text": "用户删除",
+				"state": "closed",
+				"checked": false,
+				"attributes": null,
+				"url": "/user/del",
+				"iconCls": null,
+				"pid": 1,
+				"openMode": null
+			},
+			{
+				"id": 4,
+				"text": "用户查询",
+				"state": "closed",
+				"checked": false,
+				"attributes": null,
+				"url": "/user/list",
+				"iconCls": null,
+				"pid": 1,
+				"openMode": null
+			}
+		],
+		"openMode": null
+	},
+	{
+		"id": 5,
+		"text": "角色管理",
+		"state": "closed",
+		"checked": false,
+		"attributes": null,
+		"url": "/role/manage",
+		"iconCls": null,
+		"pid": 0,
+		"children": [
+			{
+				"id": 6,
+				"text": "角色添加",
+				"state": "closed",
+				"checked": false,
+				"attributes": null,
+				"url": "/role/add",
+				"iconCls": null,
+				"pid": 5,
+				"openMode": null
+			},
+			{
+				"id": 7,
+				"text": "角色删除",
+				"state": "closed",
+				"checked": false,
+				"attributes": null,
+				"url": "/role/del",
+				"iconCls": null,
+				"pid": 5,
+				"openMode": null
+			},
+			{
+				"id": 8,
+				"text": "角色查询",
+				"state": "closed",
+				"checked": false,
+				"attributes": null,
+				"url": "/role/list",
+				"iconCls": null,
+				"pid": 5,
+				"openMode": null
+			}
+		],
+		"openMode": null
+	},
+	{
+		"id": 9,
+		"text": "菜单管理",
+		"state": "closed",
+		"checked": false,
+		"attributes": null,
+		"url": "/menu/manage",
+		"iconCls": null,
+		"pid": 0,
+		"children": [
+			{
+				"id": 10,
+				"text": "菜单添加",
+				"state": "closed",
+				"checked": false,
+				"attributes": null,
+				"url": "/menu/add",
+				"iconCls": null,
+				"pid": 9,
+				"openMode": null
+			},
+			{
+				"id": 11,
+				"text": "菜单删除",
+				"state": "closed",
+				"checked": false,
+				"attributes": null,
+				"url": "/menu/del",
+				"iconCls": null,
+				"pid": 9,
+				"openMode": null
+			},
+			{
+				"id": 12,
+				"text": "菜单查询",
+				"state": "closed",
+				"checked": false,
+				"attributes": null,
+				"url": "/menu/list",
+				"iconCls": null,
+				"pid": 9,
+				"openMode": null
+			}
+		],
+		"openMode": null
+	},
+	{
+		"id": 13,
+		"text": "运维管理",
+		"state": "closed",
+		"checked": false,
+		"attributes": null,
+		"url": "/operation/manage",
+		"iconCls": null,
+		"pid": 0,
+		"children": [
+			{
+				"id": 14,
+				"text": "日志查询",
+				"state": "closed",
+				"checked": false,
+				"attributes": null,
+				"url": "/operation/log",
+				"iconCls": null,
+				"pid": 13,
+				"openMode": null
+			},
+			{
+				"id": 15,
+				"text": "API查询",
+				"state": "closed",
+				"checked": false,
+				"attributes": null,
+				"url": "/swagger-ui.html",
+				"iconCls": null,
+				"pid": 13,
+				"openMode": null
+			}
+		],
+		"openMode": null
+	}
+]

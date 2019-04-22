@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hunger.mapper.SysMenuMapper" >
+
+    <resultMap id="BaseResultMap" type="com.hunger.model.SysMenu" >
+        <id column="mid" property="mid" jdbcType="BIGINT" />
+        <result column="url" property="url" jdbcType="VARCHAR" />
+        <result column="mname" property="mname" jdbcType="VARCHAR" />
+        <result column="icon" property="icon" jdbcType="VARCHAR" />
+        <result column="menutype" property="menutype" jdbcType="CHAR" />
+        <result column="description" property="description" jdbcType="VARCHAR" />
+        <result column="state" property="state" jdbcType="VARCHAR" />
+        <result column="opendType" property="opendType" jdbcType="VARCHAR" />
+        <result column="status" property="status" jdbcType="VARCHAR" />
+        <result column="px" property="px" jdbcType="VARCHAR" />
+        <result column="parentid" property="parentid" jdbcType="BIGINT" />
+        <result column="createdtime" property="createdtime" jdbcType="TIMESTAMP" />
+        <result column="modifytime" property="modifytime" jdbcType="TIMESTAMP" />
+    </resultMap>
+
+    <sql id="Base_Column_List" >
+        mid, url, mname, icon, menutype, description, state, opendType, status, px, parentid, createdtime, 
+        modifytime
+    </sql>
+
+    <!-- <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+        select 
+        <include refid="Base_Column_List" />
+        from sys_menu
+        where mid = #{mid,jdbcType=BIGINT}
+    </select>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+        delete from sys_menu
+        where mid = #{mid,jdbcType=BIGINT}
+    </delete>
+
+    <insert id="insert" parameterType="com.hunger.model.SysMenu" >
+        insert into sys_menu (mid, url, mname, 
+            icon, menutype, resourcetype, 
+            opend, status, px, 
+            parentid, createdtime, modifytime
+            )
+        values (#{mid,jdbcType=BIGINT}, #{url,jdbcType=VARCHAR}, #{mname,jdbcType=VARCHAR}, 
+            #{icon,jdbcType=VARCHAR}, #{menutype,jdbcType=CHAR}, #{resourcetype,jdbcType=VARCHAR}, 
+            #{opend,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR}, #{px,jdbcType=VARCHAR}, 
+            #{parentid,jdbcType=BIGINT}, #{createdtime,jdbcType=TIMESTAMP}, #{modifytime,jdbcType=TIMESTAMP}
+            )
+    </insert>
+
+    <insert id="insertSelective" parameterType="com.hunger.model.SysMenu" >
+        insert into sys_menu
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test="mid != null" >
+                mid,
+            </if>
+            <if test="url != null" >
+                url,
+            </if>
+            <if test="mname != null" >
+                mname,
+            </if>
+            <if test="icon != null" >
+                icon,
+            </if>
+            <if test="menutype != null" >
+                menutype,
+            </if>
+            <if test="resourcetype != null" >
+                resourcetype,
+            </if>
+            <if test="opend != null" >
+                opend,
+            </if>
+            <if test="status != null" >
+                status,
+            </if>
+            <if test="px != null" >
+                px,
+            </if>
+            <if test="parentid != null" >
+                parentid,
+            </if>
+            <if test="createdtime != null" >
+                createdtime,
+            </if>
+            <if test="modifytime != null" >
+                modifytime,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test="mid != null" >
+                #{mid,jdbcType=BIGINT},
+            </if>
+            <if test="url != null" >
+                #{url,jdbcType=VARCHAR},
+            </if>
+            <if test="mname != null" >
+                #{mname,jdbcType=VARCHAR},
+            </if>
+            <if test="icon != null" >
+                #{icon,jdbcType=VARCHAR},
+            </if>
+            <if test="menutype != null" >
+                #{menutype,jdbcType=CHAR},
+            </if>
+            <if test="resourcetype != null" >
+                #{resourcetype,jdbcType=VARCHAR},
+            </if>
+            <if test="opend != null" >
+                #{opend,jdbcType=VARCHAR},
+            </if>
+            <if test="status != null" >
+                #{status,jdbcType=VARCHAR},
+            </if>
+            <if test="px != null" >
+                #{px,jdbcType=VARCHAR},
+            </if>
+            <if test="parentid != null" >
+                #{parentid,jdbcType=BIGINT},
+            </if>
+            <if test="createdtime != null" >
+                #{createdtime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="modifytime != null" >
+                #{modifytime,jdbcType=TIMESTAMP},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="updateByPrimaryKeySelective" parameterType="com.hunger.model.SysMenu" >
+        update sys_menu
+        <set >
+            <if test="url != null" >
+                url = #{url,jdbcType=VARCHAR},
+            </if>
+            <if test="mname != null" >
+                mname = #{mname,jdbcType=VARCHAR},
+            </if>
+            <if test="icon != null" >
+                icon = #{icon,jdbcType=VARCHAR},
+            </if>
+            <if test="menutype != null" >
+                menutype = #{menutype,jdbcType=CHAR},
+            </if>
+            <if test="resourcetype != null" >
+                resourcetype = #{resourcetype,jdbcType=VARCHAR},
+            </if>
+            <if test="opend != null" >
+                opend = #{opend,jdbcType=VARCHAR},
+            </if>
+            <if test="status != null" >
+                status = #{status,jdbcType=VARCHAR},
+            </if>
+            <if test="px != null" >
+                px = #{px,jdbcType=VARCHAR},
+            </if>
+            <if test="parentid != null" >
+                parentid = #{parentid,jdbcType=BIGINT},
+            </if>
+            <if test="createdtime != null" >
+                createdtime = #{createdtime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="modifytime != null" >
+                modifytime = #{modifytime,jdbcType=TIMESTAMP},
+            </if>
+        </set>
+        where mid = #{mid,jdbcType=BIGINT}
+    </update>
+
+    <update id="updateByPrimaryKey" parameterType="com.hunger.model.SysMenu" >
+        update sys_menu
+        set url = #{url,jdbcType=VARCHAR},
+            mname = #{mname,jdbcType=VARCHAR},
+            icon = #{icon,jdbcType=VARCHAR},
+            menutype = #{menutype,jdbcType=CHAR},
+            resourcetype = #{resourcetype,jdbcType=VARCHAR},
+            opend = #{opend,jdbcType=VARCHAR},
+            status = #{status,jdbcType=VARCHAR},
+            px = #{px,jdbcType=VARCHAR},
+            parentid = #{parentid,jdbcType=BIGINT},
+            createdtime = #{createdtime,jdbcType=TIMESTAMP},
+            modifytime = #{modifytime,jdbcType=TIMESTAMP}
+        where mid = #{mid,jdbcType=BIGINT}
+    </update> -->
+</mapper>
