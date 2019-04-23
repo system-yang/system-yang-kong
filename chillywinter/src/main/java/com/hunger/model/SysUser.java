@@ -29,7 +29,7 @@ public class SysUser implements Serializable{
 
     private String salt;
 
-    private Integer age;
+    private String email;
 
     private String phone;
 
@@ -83,15 +83,15 @@ public class SysUser implements Serializable{
         this.salt = salt == null ? null : salt.trim();
     }
 
-    public Integer getAge() {
-        return age;
-    }
+    public String getEmail() {
+		return email;
+	}
 
-    public void setAge(Integer age) {
-        this.age = age;
-    }
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
-    public String getPhone() {
+	public String getPhone() {
         return phone;
     }
 

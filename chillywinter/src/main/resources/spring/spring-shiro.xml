@@ -68,10 +68,23 @@
                     authc 需要认证
                     user  验证通过或RememberMe登录的都可以
                 -->
+                <!-- 
+                        //swagger接口权限 开放
+        				/swagger-ui.html = anon
+        				/webjars/** = anon
+        				/v2/** = anon
+        				/swagger-resources/** = anon
+                 -->
+    			
                 /commons/** = anon
                 /static/** = anon
                 /login = anon
+                
+    			
                 /** = user
+               <!--  
+                /** = anon
+                -->
             </value>
         </property>
         <property name="filters">

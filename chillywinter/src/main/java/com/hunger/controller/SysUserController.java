@@ -14,7 +14,10 @@ import com.baomidou.mybatisplus.plugins.Page;
 import com.hunger.model.SysMenu;
 import com.hunger.model.SysUser;
 import com.hunger.request.PageInfo;
+import com.hunger.request.Result;
 import com.hunger.service.ISysUserService;
+import com.hunger.shiro.PasswordHash;
+import com.hunger.utils.DigestUtils;
 
 @Controller
 @RequestMapping(value="/user")
@@ -23,6 +26,13 @@ public class SysUserController {
 	@Autowired
 	ISysUserService sysUserService;
 	
+	
+	
+	
+	@RequestMapping(value="/manage")
+	public String view() {
+		return "/admin/user";
+	}
 	
 	@RequestMapping(value="/list")
 	@ResponseBody
@@ -38,9 +48,17 @@ public class SysUserController {
 		return pageInfo;
 	}
 	
-	@RequestMapping(value="/manage")
-	public String view() {
-		return "/admin/user";
+	@RequestMapping(value="/add")
+	@ResponseBody
+	public Result add(SysUser u) {
+		String pwd = u.getPassword();
+		u.setSalt(u.getNickname());
+		String salt = u.getSalt();
+		String realpwd = DigestUtils.hashByShiro("md5", pwd, salt, 2);
+		u.setPassword(realpwd);
+		boolean b = sysUserService.insert(u);
+		
+		return new Result(b);
 	}
 
 }

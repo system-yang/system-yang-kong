@@ -8,7 +8,7 @@
         <result column="username" property="username" jdbcType="VARCHAR" />
         <result column="password" property="password" jdbcType="VARCHAR" />
         <result column="salt" property="salt" jdbcType="VARCHAR" />
-        <result column="age" property="age" jdbcType="INTEGER" />
+        <result column="email" property="email" jdbcType="VARCHAR" />
         <result column="phone" property="phone" jdbcType="VARCHAR" />
         <result column="sex" property="sex" jdbcType="VARCHAR" />
         <result column="organizationid" property="organizationid" jdbcType="BIGINT" />
@@ -18,7 +18,7 @@
     </resultMap>
 
     <sql id="Base_Column_List" >
-        uid, nickname, username, password, salt, age, phone, sex, organizationid, status, 
+        uid, nickname, username, password, salt, email, phone, sex, organizationid, status, 
         createdtime, moddfytime
     </sql>
     
