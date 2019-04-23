@@ -6,17 +6,8 @@ import java.util.Date;
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.enums.IdType;
 
-/**
- * 
- * 
- * @author wcyong
- * 
- * @date 2019-04-21
- */
 public class SysRole implements Serializable{
-    /**
-	 * 
-	 */
+	
 	private static final long serialVersionUID = 1L;
 	@TableId(value = "RID",type = IdType.INPUT)
 	private Long rid;

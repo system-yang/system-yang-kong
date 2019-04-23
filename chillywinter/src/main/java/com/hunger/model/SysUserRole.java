@@ -5,17 +5,8 @@ import java.io.Serializable;
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.enums.IdType;
 
-/**
- * 
- * 
- * @author wcyong
- * 
- * @date 2019-04-21
- */
 public class SysUserRole implements Serializable{
-    /**
-	 * 
-	 */
+	
 	private static final long serialVersionUID = 1L;
 	@TableId(value = "URID",type = IdType.INPUT)
 	private Long urid;

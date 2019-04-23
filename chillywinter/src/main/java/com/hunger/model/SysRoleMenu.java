@@ -5,17 +5,9 @@ import java.io.Serializable;
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.enums.IdType;
 
-/**
- * 
- * 
- * @author wcyong
- * 
- * @date 2019-04-21
- */
+
 public class SysRoleMenu implements Serializable{
-    /**
-	 * 
-	 */
+	
 	private static final long serialVersionUID = 1L;
 	@TableId(value = "RMID",type = IdType.INPUT)
 	private Long rmid;
